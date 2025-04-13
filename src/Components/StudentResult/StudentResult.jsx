@@ -12,7 +12,9 @@ const data = [
     { "student_id": 8, "name": "Hannah", "math": 73, "science": 77, "english": 79 },
     { "student_id": 9, "name": "Ian", "math": 81, "science": 80, "english": 85 },
     { "student_id": 10, "name": "Julia", "math": 95, "science": 93, "english": 97 }
-  ]
+  ];
+
+  
   
 
 const StudentResult = () => {

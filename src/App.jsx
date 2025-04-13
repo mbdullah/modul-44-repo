@@ -4,8 +4,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import PricingOptions from "./Components/PricingOptions/PricingOptions";
 import StudentResult from "./Components/StudentResult/StudentResult";
 import TripleData from "./Components/StudentResult/TripleData";
+import axios from "axios";
+import MarksData from "./Components/MarksData/MarksData";
 
 const PricingPromise = fetch('PricingData.json').then(res => res.json());
+
+const marksPromise = axios.get('MarksData.json')
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
         </Suspense>
         <StudentResult></StudentResult>
         <TripleData></TripleData>
+
+        <Suspense fallback={<span className="loading loading-spinner loading-md"></span>}>
+        <MarksData marksPromise = {marksPromise}></MarksData>
+        </Suspense>
       </main>
       <footer>
 
