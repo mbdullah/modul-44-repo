@@ -4,7 +4,7 @@ import Feature from './feature';
 const PriceOption = ({pricing}) => {
     const {name, price, description, features} = pricing
     return (
-        <div className='flex flex-col border-2 border-gray-400 rounded-2xl p-4 bg-amber-200 mx-5'>
+        <div className='flex flex-col border-2 border-gray-400 rounded-2xl p-4 bg-amber-200 mx-5 mb-10'>
         {/* card header */}
         <div>
             <h1 className="text-5xl">{name}</h1>
